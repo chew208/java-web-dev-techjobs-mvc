@@ -1,6 +1,7 @@
 package org.launchcode.javawebdevtechjobsmvc.controllers;
 
 import org.launchcode.javawebdevtechjobsmvc.models.Job;
+import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +33,7 @@ public class ListController {
         tableChoices.put("location", JobData.getAllLocations());
         tableChoices.put("positionType", JobData.getAllPositionTypes());
         tableChoices.put("coreCompetency", JobData.getAllCoreCompetency());
+        //tableChoices.put("All", JobData.findAll());
     }
 
     @RequestMapping(value = "")
